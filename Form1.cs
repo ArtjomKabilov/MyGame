@@ -43,13 +43,14 @@ namespace MyGame
             }
             
             pictureBox1.Invalidate();
-            /*if ((pictureBox4.Location.X < Circle.X + Circle.Width) && (pictureBox4.Location.X > Circle.X))
+            if ((pictureBox3.Location.X < Circle.X + Circle.Width) && (pictureBox3.Location.X > Circle.X))
             {
-                if ((pictureBox4.Location.Y < Circle.Y + Circle.Height) && (pictureBox4.Location.Y > Circle.Y))
+                if ((pictureBox3.Location.Y < Circle.Y + Circle.Height) && (pictureBox3.Location.Y > Circle.Y))
                 {
-                    MessageBox.Show("Ты проиграл, нельзя касаться чёрных полос", "Сообщение");
+                    pictureBox11.Hide();
+                    pictureBox3.Hide();
                 }
-            }*/
+            }
         }
 
         private void Down(object sender, MouseEventArgs e)
@@ -73,8 +74,52 @@ namespace MyGame
 
         private void enter(object sender, EventArgs e)
         {
-            MessageBox.Show("Ты проиграл, нельзя касаться чёрных полос", "Сообщение");
-            this.Close();
+            
+            var answer = MessageBox.Show(
+                "Ты проиграл, нельзя касаться чёрных полос, хочешь повторить",
+                "Сообщение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+            if (answer == DialogResult.Yes)
+            {
+                Form1 fp = new Form1();
+                fp.Show();
+                fp.WindowState = FormWindowState.Minimized;
+                fp.WindowState = FormWindowState.Normal;
+                this.Hide();
+
+            }
+            else
+            {
+                this.Close();
+
+            }
+            
+        }
+
+        private void Click(object sender, MouseEventArgs e)
+        {
+            pictureBox11.Hide();
+            pictureBox3.Hide();
+        }
+
+        private void win(object sender, EventArgs e)
+        {
+            Form2 op = new Form2();
+            op.Show();
+            op.WindowState = FormWindowState.Minimized;
+            op.WindowState = FormWindowState.Normal;
+            this.Hide();
+        }
+
+        private void door(object sender, EventArgs e)
+        {
+            Point pointt;
+            pointt = pictureBox33.Location;
+            pointt.Offset(pictureBox33.Width / 2, pictureBox33.Height / 2);
+            Cursor.Position = PointToScreen(pointt);
         }
     }
 }

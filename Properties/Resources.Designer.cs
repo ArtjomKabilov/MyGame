@@ -83,6 +83,16 @@ namespace MyGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_emoji_domain_medal_noto_fonts_emojipedia_emoji_medal_logo {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-emoji-domain-medal-noto-fonts-emojipedia-emoji-medal-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap town_portal {
             get {
                 object obj = ResourceManager.GetObject("town-portal", resourceCulture);
