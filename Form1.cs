@@ -93,7 +93,11 @@ namespace MyGame
             }
             else
             {
-                this.Close();
+                MainMenu mm = new MainMenu();
+                mm.Show();
+                mm.WindowState = FormWindowState.Minimized;
+                mm.WindowState = FormWindowState.Normal;
+                this.Hide();
 
             }
             
