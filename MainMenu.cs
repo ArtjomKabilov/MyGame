@@ -19,7 +19,7 @@ namespace MyGame
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 fp = new Form1();
+            Form1 fp = new Form1 ();
             fp.Show();
             fp.WindowState = FormWindowState.Minimized;
             fp.WindowState = FormWindowState.Normal;
@@ -33,7 +33,17 @@ namespace MyGame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ты играешь за стрелку мышьки, тебе нельзя касаться чёрных стенок", "Сообщение");
+            MessageBox.Show("Ты играешь за стрелку мышьки, тебе нельзя касаться чёрных стенок," +
+                " что-бы открыть двери, нажми на ключ той же расцветки.", "Сообщение");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 fp = new Form3();
+            fp.Show();
+            fp.WindowState = FormWindowState.Minimized;
+            fp.WindowState = FormWindowState.Normal;
+            this.Hide();
         }
     }
 }

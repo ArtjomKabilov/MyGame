@@ -35,15 +35,16 @@ namespace MyGame
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = global::MyGame.Properties.Resources.png_clipart_emoji_domain_medal_noto_fonts_emojipedia_emoji_medal_logo;
-            this.pictureBox1.Image = global::MyGame.Properties.Resources.png_clipart_emoji_domain_medal_noto_fonts_emojipedia_emoji_medal_logo;
-            this.pictureBox1.InitialImage = global::MyGame.Properties.Resources.png_clipart_emoji_domain_medal_noto_fonts_emojipedia_emoji_medal_logo;
+            this.pictureBox1.ErrorImage = global::MyGame.Properties.Resources.W;
+            this.pictureBox1.Image = global::MyGame.Properties.Resources.W;
+            this.pictureBox1.InitialImage = global::MyGame.Properties.Resources.W;
             this.pictureBox1.Location = new System.Drawing.Point(1, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 452);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form2
             // 

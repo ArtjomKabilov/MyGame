@@ -16,5 +16,14 @@ namespace MyGame
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MainMenu mm = new MainMenu();
+            mm.Show();
+            mm.WindowState = FormWindowState.Minimized;
+            mm.WindowState = FormWindowState.Normal;
+            this.Hide();
+        }
     }
 }
